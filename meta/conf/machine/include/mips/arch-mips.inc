@@ -100,3 +100,8 @@ TUNE_FEATURES_tune-mips64el-nf = "n64"
 BASE_LIB_tune-mips64el-nf = "lib64"
 MIPSPKGSFX_VARIANT_tune-mips64el-nf = "${TUNE_ARCH}"
 PACKAGE_EXTRA_ARCHS_tune-mips64el-nf = "mips64el-nf"
+
+QEMU_MEM = "-m 256"
+QEMU_MAHINE_SUBTYPE = "-machine malta"
+QEMU_SYSTEM_OPTIONS = "-no-reboot"
+QEMU_KERNEL_OPTIONS = "console=ttyS0 console=tty"

@@ -51,3 +51,9 @@ TUNE_FEATURES_tune-x86-64-x32 = "mx32"
 BASE_LIB_tune-x86-64-x32 = "libx32"
 TUNE_PKGARCH_tune-x86-64-x32 = "x86_64_x32"
 PACKAGE_EXTRA_ARCHS_tune-x86-64-x32 = "${TUNE_PKGARCH_tune-x86-64-x32}"
+
+QEMU_CPU_SUBTYPE = "${@bb.utils.contains('TUNE_FEATURES', 'm64', '-cpu core2duo', '', d)}"
+QEMU_CPU_SUBTYPE_KVM = "${@bb.utils.contains('TUNE_FEATURES', 'm64', '-cpu kvm64', '', d)}"
+
+QEMU_CPU_SUBTYPE .= "${@bb.utils.contains('TUNE_FEATURES', 'm32', '-cpu qemu32', '', d)}"
+QEMU_CPU_SUBTYPE_KVM .= "${@bb.utils.contains('TUNE_FEATURES', 'm32', '-cpu kvm32', '', d)}"

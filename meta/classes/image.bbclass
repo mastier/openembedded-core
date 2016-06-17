@@ -22,6 +22,9 @@ INHIBIT_DEFAULT_DEPS = "1"
 TESTIMAGECLASS = "${@base_conditional('TEST_IMAGE', '1', 'testimage-auto', '', d)}"
 inherit ${TESTIMAGECLASS}
 
+QEMU_BOOT_CLASS = "${@base_conditional('QEMU_BOOT_SUPPORTED', '1', 'qemu-boot', '', d)}"
+inherit ${QEMU_BOOT_CLASS}
+
 # IMAGE_FEATURES may contain any available package group
 IMAGE_FEATURES ?= ""
 IMAGE_FEATURES[type] = "list"

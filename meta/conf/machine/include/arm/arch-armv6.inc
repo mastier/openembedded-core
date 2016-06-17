@@ -48,3 +48,5 @@ PACKAGE_EXTRA_ARCHS_tune-armv6b        = "${PACKAGE_EXTRA_ARCHS_tune-armv5eb-vfp
 PACKAGE_EXTRA_ARCHS_tune-armv6tb       = "${PACKAGE_EXTRA_ARCHS_tune-armv5teb-vfp} armv6b armv6tb armv6b-vfp armv6tb-vfp"
 PACKAGE_EXTRA_ARCHS_tune-armv6hfb      = "${PACKAGE_EXTRA_ARCHS_tune-armv5ehfb-vfp}  armv6hfb-vfp"
 PACKAGE_EXTRA_ARCHS_tune-armv6thfb     = "${PACKAGE_EXTRA_ARCHS_tune-armv5tehfb-vfp} armv6hfb-vfp armv6thfb-vfp"
+
+QEMU_CPU_SUBTYPE = "-cpu arm1136"

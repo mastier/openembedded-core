@@ -32,3 +32,8 @@ TUNE_FEATURES_tune-powerpc = "m32 fpu-hard"
 BASE_LIB_tune-powerpc = "lib"
 TUNE_PKGARCH_tune-powerpc = "powerpc"
 PACKAGE_EXTRA_ARCHS_tune-powerpc = "powerpc"
+
+QEMU_MAHINE_SUBTYPE = "-machine mac99"
+QEMU_CPU_SUBTYPE = "-cpu G4"
+QEMU_SYSTEM_OPTIONS = "-no-reboot"
+QEMU_KERNEL_OPTIONS = "console=ttyS0 console=tty"
